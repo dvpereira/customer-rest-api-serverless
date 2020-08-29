@@ -1,3 +1,5 @@
 .serverless
 *.pyc
 *.pyo
+.DS_Store
+node_modules
