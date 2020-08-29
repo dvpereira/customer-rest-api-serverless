@@ -1,0 +1,1 @@
+validate-docbr==1.7.0
