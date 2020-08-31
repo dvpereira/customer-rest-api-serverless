@@ -25,7 +25,7 @@ def update(event, context):
 
     table = dynamodb.Table(os.environ['DYNAMODB_TABLE'])
 
-    # update the todo in the database
+    # update the customer in the database
     result = table.update_item(
         Key={
             'id': event['pathParameters']['id']

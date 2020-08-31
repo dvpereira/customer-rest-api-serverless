@@ -19,7 +19,6 @@ def create(event, context):
             "body": "{\n\"error\" : \"Invalid document\"\n}"
         }
         return response
-        #raise Exception("Couldn't create the todo item.")
     
     timestamp = str(time.time())
 
@@ -29,13 +28,13 @@ def create(event, context):
         'id': str(uuid.uuid1()),
         'document': data['document'],
         'name' : data['name'],
-        "mothersName" : data['mothersName'],
-        "addresses" : data['addresses'],
+        'mothersName' : data['mothersName'],
+        'addresses' : data['addresses'],
         'createdAt': timestamp,
         'updatedAt': timestamp,
     }
 
-    # write the todo to the database
+    # write the customer to the database
     table.put_item(Item=item)
 
     # create a response
